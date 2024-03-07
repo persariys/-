@@ -1,59 +1,31 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
 .container {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    /* Ваши стили для контейнера */
 }
 
-.message {
-    margin-bottom: 10px;
-    padding: 10px;
-    background-color: #f2f2f2;
-    border-radius: 5px;
-}
-
-.message.sender {
-    background-color: #e6f7ff; /* Цвет фона для сообщений отправителя */
-}
-
-.message.receiver {
-    background-color: #f2f2f2; /* Цвет фона для сообщений получателя */
-}
-
-.message .meta {
-    font-size: 0.8em;
-    color: #666;
-}
-
-.message .content {
-    font-size: 1em;
-}
-
-.form {
+form {
     margin-top: 20px;
 }
 
-.form input[type="text"],
-.form button {
+input[type="text"] {
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 1em;
 }
 
-.form button {
+button {
+    padding: 10px 20px;
     background-color: #007bff;
     color: #fff;
+    border: none;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-.form button:hover {
+button:hover {
     background-color: #0056b3;
+}
+
+#messages {
+    margin-top: 20px;
 }
