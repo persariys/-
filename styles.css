@@ -1,31 +1,38 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
 .container {
-    /* Ваши стили для контейнера */
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
-form {
-    margin-top: 20px;
-}
-
-input[type="text"] {
+#messages {
+    margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    font-size: 1em;
+    background-color: #f9f9f9;
+    overflow-y: scroll;
+    max-height: 300px;
+}
+
+#messageInput {
+    width: calc(100% - 80px);
+    margin-right: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 button {
     padding: 10px 20px;
-    background-color: #007bff;
-    color: #fff;
     border: none;
     border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
     cursor: pointer;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#messages {
-    margin-top: 20px;
 }
