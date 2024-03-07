@@ -1,38 +1,59 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
 }
 
 .container {
-    max-width: 400px;
-    margin: 50px auto;
+    max-width: 800px;
+    margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    border: 1px solid #ccc;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
 }
 
-#word {
-    margin: 20px 0;
-    font-size: 24px;
-    font-weight: bold;
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    background-color: #f2f2f2;
+    border-radius: 5px;
 }
 
-#letters {
+.message.sender {
+    background-color: #e6f7ff; /* Цвет фона для сообщений отправителя */
+}
+
+.message.receiver {
+    background-color: #f2f2f2; /* Цвет фона для сообщений получателя */
+}
+
+.message .meta {
+    font-size: 0.8em;
+    color: #666;
+}
+
+.message .content {
+    font-size: 1em;
+}
+
+.form {
     margin-top: 20px;
 }
 
-.letter {
-    display: inline-block;
+.form input[type="text"],
+.form button {
     padding: 10px;
-    margin: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.form button {
     background-color: #007bff;
     color: #fff;
-    border-radius: 5px;
     cursor: pointer;
 }
 
-.letter:hover {
+.form button:hover {
     background-color: #0056b3;
 }
