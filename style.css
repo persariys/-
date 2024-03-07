@@ -1,60 +1,38 @@
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: #f0f0f0;
 }
 
-header {
-    background-color: #333;
-    color: #fff;
+.container {
+    max-width: 400px;
+    margin: 50px auto;
     padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
-main {
-    padding: 20px;
-    display: flex;
-    justify-content: center;
+#word {
+    margin: 20px 0;
+    font-size: 24px;
+    font-weight: bold;
 }
 
-.calculator {
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
+#letters {
+    margin-top: 20px;
 }
 
-.number-input {
-    width: 100px;
-    padding: 5px;
-    margin: 10px;
-}
-
-.operators button {
-    width: 40px;
-    height: 40px;
-    margin: 5px;
-    border: none;
-    border-radius: 5px;
-    background-color: #555;
-    color: #fff;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-button#calculate {
-    width: 100%;
+.letter {
+    display: inline-block;
     padding: 10px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    background-color: #333;
+    margin: 5px;
+    background-color: #007bff;
     color: #fff;
-    font-size: 16px;
+    border-radius: 5px;
     cursor: pointer;
 }
 
-button#calculate:hover,
-.operators button:hover {
-    background-color: #777;
+.letter:hover {
+    background-color: #0056b3;
 }
