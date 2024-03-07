@@ -1,18 +1,26 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const messageForm = document.getElementById('messageForm');
-    const messageInput = document.getElementById('messageInput');
-    const messagesContainer = document.getElementById('messages');
+const express = require('express');
+const http = require('http');
+const socketIo = require('socket.io');
 
-    messageForm.addEventListener('submit', function(event) {
-        event.preventDefault();
-        const message = messageInput.value.trim();
-        if (message !== '') {
-            const messageElement = document.createElement('div');
-            messageElement.classList.add('message');
-            messageElement.textContent = message;
-            messagesContainer.appendChild(messageElement);
-            messagesContainer.scrollTop = messagesContainer.scrollHeight; // Прокрутка до последнего сообщения
-            messageInput.value = ''; // Очистка поля ввода
-        }
+const app = express();
+const server = http.createServer(app);
+const io = socketIo(server);
+
+app.use(express.static('public'));
+
+io.on('connection', (socket) => {
+    console.log('User connected');
+
+    socket.on('disconnect', () => {
+        console.log('User disconnected');
     });
+
+    socket.on('message', (message) => {
+        io.emit('message', message); // Отправляем сообщение всем клиентам
+    });
+});
+
+const PORT = process.env.PORT || 3000;
+server.listen(PORT, () => {
+    console.log(`Server is running on port ${PORT}`);
 });
