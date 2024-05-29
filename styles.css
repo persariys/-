@@ -1,38 +1,73 @@
-body {
-    font-family: Arial, sans-serif;
-}
-
-.container {
-    max-width: 600px;
-    margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-#messages {
-    margin-bottom: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    overflow-y: scroll;
-    max-height: 300px;
-}
-
-#messageInput {
-    width: calc(100% - 80px);
-    margin-right: 10px;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #007bff;
-    color: #fff;
-    cursor: pointer;
-}
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Татар Татаров</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            width: 100%;
+            text-align: center;
+        }
+        nav {
+            margin: 1rem 0;
+        }
+        nav a {
+            margin: 0 1rem;
+            text-decoration: none;
+            color: #333;
+            padding: 0.5rem 1rem;
+            background-color: #eaeaea;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #ccc;
+        }
+        section {
+            padding: 2rem;
+            text-align: center;
+        }
+        iframe {
+            width: 80%;
+            height: 500px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Татар Татаров</h1>
+        <p>Маладец</p>
+        <p>Ислам</p>
+    </header>
+    <nav>
+        <a href="#menu">Меню</a>
+        <a href="#tictactoe">Крестики-нолики</a>
+        <a href="#minesweeper">Сапёр</a>
+    </nav>
+    <section id="menu">
+        <h2>Меню</h2>
+        <p>Добро пожаловать на мою личную веб-страницу!</p>
+    </section>
+    <section id="tictactoe">
+        <h2>Крестики-нолики</h2>
+        <iframe src="https://playtictactoe.org/"></iframe>
+    </section>
+    <section id="minesweeper">
+        <h2>Сапёр</h2>
+        <iframe src="https://minesweeperonline.com/"></iframe>
+    </section>
+</body>
+</html>
