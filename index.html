@@ -1,67 +1,19 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Крестики-нолики</title>
-    <style>
-        /* Ваши CSS стили здесь */
-    </style>
+    <title>Simple Website</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Крестики-нолики</h1>
-    <div id="board"></div>
-    <script>
-        const board = document.getElementById('board');
-        const squares = Array.from({ length: 9 }, (_, index) => `<div class="square" data-index="${index}"></div>`);
-
-        board.innerHTML = squares.join('');
-
-        const squaresElements = document.querySelectorAll('.square');
-        let currentPlayer = 'X';
-
-        squaresElements.forEach(square => {
-            square.addEventListener('click', handleClick);
-        });
-
-        function handleClick(event) {
-            const square = event.target;
-            if (!square.textContent) {
-                square.textContent = currentPlayer;
-                if (checkWin()) {
-                    alert(`Игрок ${currentPlayer} победил!`);
-                    resetBoard();
-                } else if (checkDraw()) {
-                    alert('Ничья!');
-                    resetBoard();
-                } else {
-                    currentPlayer = currentPlayer === 'X' ? 'O' : 'X';
-                }
-            }
-        }
-
-        function checkWin() {
-            const winningCombos = [
-                [0, 1, 2], [3, 4, 5], [6, 7, 8],
-                [0, 3, 6], [1, 4, 7], [2, 5, 8],
-                [0, 4, 8], [2, 4, 6]
-            ];
-
-            return winningCombos.some(combo => {
-                return combo.every(index => squaresElements[index].textContent === currentPlayer);
-            });
-        }
-
-        function checkDraw() {
-            return squaresElements.every(square => square.textContent);
-        }
-
-        function resetBoard() {
-            squaresElements.forEach(square => {
-                square.textContent = '';
-            });
-            currentPlayer = 'X';
-        }
-    </script>
+    <header>
+        <h1>Welcome to My Website</h1>
+    </header>
+    <main>
+        <p>This is a simple web page.</p>
+        <button id="alertButton">Click me</button>
+    </main>
+    <script src="script.js"></script>
 </body>
 </html>
